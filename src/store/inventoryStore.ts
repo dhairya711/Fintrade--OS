@@ -19,6 +19,7 @@ interface InventoryState {
   deductStock: (productId: string, qty: number, orderId: string) => void;
   godowns: Godown[];
   transferStock: (productId: string, fromGodownId: string, toGodownId: string, qty: number) => void;
+  bulkImportProducts: (products: Omit<Product, 'id' | 'createdAt' | 'updatedAt'>[]) => void;
   resetToSeed: () => void;
 }
 
@@ -188,6 +189,16 @@ export const useInventoryStore = create<InventoryState>()(
           note: `Dispatched for order ${orderId}`,
           createdBy: 'System',
         });
+      },
+
+      bulkImportProducts: (newProductsData) => {
+        const newProducts: Product[] = newProductsData.map(data => ({
+          ...data,
+          id: generateId('prod'),
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        }));
+        set((s) => ({ products: [...s.products, ...newProducts] }));
       },
 
       resetToSeed: () => {

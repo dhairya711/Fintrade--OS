@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useRef } from 'react';
+import Papa from 'papaparse';
 import { useSearchParams } from 'react-router-dom';
 import {
   Plus, Search, Filter, Download, Eye, Edit2, Trash2, RefreshCw,
@@ -469,7 +470,7 @@ function ProductDetailDrawer({ product, open, onClose, onTransfer }: { product: 
 // ─── Inventory Page ────────────────────────────────────────────────────────────
 
 export default function InventoryPage() {
-  const { products, addProduct, updateProduct, deleteProduct, deleteProducts } = useInventoryStore();
+  const { products, addProduct, updateProduct, deleteProduct, deleteProducts, bulkImportProducts } = useInventoryStore();
   const { addActivity } = useActivityStore();
   const [searchParams] = useSearchParams();
 
@@ -489,6 +490,39 @@ export default function InventoryPage() {
   const [transferProduct, setTransferProduct] = useState<Product | null>(null);
   const [detailProduct, setDetailProduct] = useState<Product | null>(null);
   const [formLoading, setFormLoading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleImportCsv = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    Papa.parse(file, {
+      header: true,
+      skipEmptyLines: true,
+      complete: (results) => {
+        const parsedProducts = results.data.map((row: any) => ({
+          sku: row.SKU || generateSku(row.Category || 'Components'),
+          name: row.Name || 'Imported Product',
+          category: row.Category || 'Components',
+          hsn: row.HSN || '0000',
+          wholesalePrice: parseFloat(row['Wholesale Price']) || 0,
+          mrp: parseFloat(row.MRP) || 0,
+          currentStock: parseInt(row.Stock, 10) || 0,
+          reorderLevel: parseInt(row['Reorder Level'], 10) || 10,
+          moq: parseInt(row.MOQ, 10) || 5,
+          unit: row.Unit || 'Nos',
+          supplier: row.Supplier || 'Unknown Supplier',
+        }));
+        
+        bulkImportProducts(parsedProducts as any);
+        toast.success(`Successfully imported ${parsedProducts.length} products`);
+        if (fileInputRef.current) fileInputRef.current.value = '';
+      },
+      error: () => {
+        toast.error('Failed to parse CSV file');
+      }
+    });
+  };
 
   // ── Filter / sort ──────────────────────────────────────────────────────────
   const filtered = useMemo(() => {
@@ -792,6 +826,10 @@ export default function InventoryPage() {
                 Delete {selectedIds.size}
               </Button>
             )}
+            <input type="file" accept=".csv" className="hidden" ref={fileInputRef} onChange={handleImportCsv} />
+            <Button variant="outline" size="sm" leftIcon={<Download size={13} />} onClick={() => fileInputRef.current?.click()}>
+              Import CSV
+            </Button>
             <Button variant="outline" size="sm" leftIcon={<Download size={13} />} onClick={exportCsv}>
               Export CSV
             </Button>
