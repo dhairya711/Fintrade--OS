@@ -60,7 +60,7 @@ export default function PinLogin() {
         </form>
         
         <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500">
-          <p>Protected by GIT ERP Secure Access</p>
+          <p>Protected by FinTrade OS Secure Access</p>
           <p className="mt-1">Default PIN is 1234 (Can be changed in settings)</p>
         </div>
       </Card>

@@ -395,7 +395,7 @@ export default function ReportsPage() {
     <div className="space-y-5 animate-fade-in">
       <div>
         <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">Reports & Analytics</h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">Business intelligence for GIT Electric Pvt. Ltd.</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400">Business intelligence for FinTrade OS Ltd.</p>
       </div>
 
       <Card className="overflow-visible">

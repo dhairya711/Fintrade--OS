@@ -1,11 +1,11 @@
-# ⚡ GIT Electric ERP
+# ⚡ FinTrade OS
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Zustand](https://img.shields.io/badge/Zustand-443E38?style=for-the-badge&logo=react&logoColor=white)
 
-**GIT Electric ERP** is an enterprise-grade, front-end B2B Inventory, Order Management, and GST Billing application designed specifically for wholesale electrical trading companies (switchgears, transformers, MCBs). 
+**FinTrade OS** is an enterprise-grade, front-end B2B Inventory, Order Management, and GST Billing application designed specifically for wholesale trading companies. 
 
 Built with an intense focus on dense, professional UI/UX, data immutability, and government compliance, this system mimics the workflows of industry-standard ERPs like Zoho Inventory or SAP Business One.
 
@@ -51,8 +51,8 @@ Instantly calculate stock valuation, sales distributions, and aggregated GST lia
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/git-electric-erp.git
-   cd git-electric-erp
+   git clone https://github.com/yourusername/fintrade-os.git
+   cd fintrade-os
    ```
 
 2. Install dependencies:

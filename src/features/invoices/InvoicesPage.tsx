@@ -213,7 +213,7 @@ export function InvoicePrintView({ invoice }: { invoice: Invoice }) {
             <div className="flex items-center gap-2 mb-2">
               <svg width="32" height="32" viewBox="0 0 36 36"><path d="M18 2L32 10V26L18 34L4 26V10L18 2Z" fill="#2563EB"/><path d="M21 8L14 19H19L15 28L23 17H18L21 8Z" fill="white"/></svg>
               <div>
-                <p className="font-bold text-lg leading-tight">GIT ELECTRIC PVT. LTD.</p>
+                <p className="font-bold text-lg leading-tight">FINTRADE OS LTD.</p>
                 <p className="text-[10px] text-gray-500 tracking-widest">WHOLESALE ELECTRICAL TRADERS</p>
               </div>
             </div>
@@ -380,7 +380,7 @@ export function InvoicePrintView({ invoice }: { invoice: Invoice }) {
               <p>Goods once sold will not be returned.</p>
             </div>
             <div className="text-right">
-              <p className="text-[10px] font-bold">For GIT ELECTRIC PVT. LTD.</p>
+              <p className="text-[10px] font-bold">For FINTRADE OS LTD.</p>
               <div className="h-10 my-2 border-b border-dashed border-gray-300 w-36"/>
               <p className="text-[10px] font-semibold">Authorised Signatory</p>
             </div>

@@ -34,7 +34,7 @@ function Logo({ collapsed }: { collapsed: boolean }) {
       </svg>
       {!collapsed && (
         <div className="flex flex-col leading-tight">
-          <span className="text-white font-bold text-base tracking-tight">GIT Electric</span>
+          <span className="text-white font-bold text-base tracking-tight">FinTrade OS</span>
           <span className="text-blue-300 text-[10px] font-semibold uppercase tracking-widest">ERP System</span>
         </div>
       )}
@@ -272,8 +272,8 @@ function Topbar() {
             <div className="absolute right-0 top-full mt-2 w-64 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 z-50 animate-scale-in">
               <div className="px-4 py-3 border-b border-slate-200 dark:border-slate-700">
                 <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">Vrund Doshi</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">vrund@gitelectric.in</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">GIT Electric Pvt. Ltd.</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">vrund@fintrade-os.com</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">FinTrade OS Ltd.</p>
               </div>
               <div className="px-4 py-3 border-b border-slate-200 dark:border-slate-700">
                 <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wide">Switch Role</p>
@@ -331,7 +331,7 @@ function Footer({ collapsed }: { collapsed: boolean }) {
       )}
     >
       <p className="text-[11px] text-slate-400 dark:text-slate-500">
-        GIT Electric Pvt. Ltd. &nbsp;|&nbsp; 6, Loha Bhuvan, Old Lakkad Pitha Road, Sultanpura, Vadodara, Gujarat, 390001
+        FinTrade OS Ltd. &nbsp;|&nbsp; 6, Loha Bhuvan, Old Lakkad Pitha Road, Sultanpura, Vadodara, Gujarat, 390001
         &nbsp;|&nbsp; Est. 2017 &nbsp;|&nbsp; Manager: Rikesh Patel &nbsp;|&nbsp; Admin: Vrund Doshi
       </p>
     </footer>
