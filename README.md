@@ -25,6 +25,9 @@ Built a strictly immutable audit trail designed for financial security. Every cr
 - **NIC E-Way Bill Integration:** Implemented a multi-step, asynchronous API handshake simulation mimicking the Indian Government's GST portal to generate 12-digit transportation E-Way Bills for invoices > ₹50,000.
 - **RFID/Barcode Hardware Mocking:** Built a UI module that simulates WebUSB/Bluetooth hardware integration, allowing warehouse workers to "scan" high-value serial/batch numbers for dispatch.
 
+### 📥 High-Volume Bulk Data Pipelines
+Integrated a client-side parsing engine (`papaparse`) to intercept, validate, and bulk-inject hundreds of rows of inventory data from raw CSV files directly into the relational store, complete with automated schema-mapping and data fallback logic to ensure zero downtime.
+
 ### 🏢 Multi-Node Inventory & Relational State
 Leveraged **Zustand** with persistent storage to create a complex, relational frontend database. 
 - Tracks atomic stock levels across multiple physical godowns (warehouses).
