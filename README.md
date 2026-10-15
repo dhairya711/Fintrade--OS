@@ -10,11 +10,30 @@
 
 <br/>
 
+<div align="center">
+  <img src="src/assets/hero.png" alt="FinTrade OS Platform Overview" width="850" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
+</div>
+
+<br/>
+
 **FinTrade OS** is a high-performance, production-grade B2B Financial Operations and Inventory Management system. 
 
 Engineered strictly for **scale, data immutability, and government tax compliance**, this platform moves beyond standard CRUD apps to simulate the complex architectural requirements of enterprise FinOps systems.
 
 ---
+
+## 📸 System Showcase & Workflow Visuals
+
+| 🏢 Multi-Node Inventory & Godowns | 🔐 Cryptographic Ledger (SHA-256) |
+| :---: | :---: |
+| Real-time inventory reconciliation across physical godowns with atomic stock transfer locks. | Immutable system audit log with SHA-256 checksums ensuring tamper-proof financial ledgers. |
+
+| 📡 NIC E-Way Bill & Hardware Mock | 🧾 Dynamic Algorithmic GST Engine |
+| :---: | :---: |
+| Asynchronous handshake simulation with Indian GST portal for E-Way bill generation (> ₹50k). | Automated resolution of Inter-state (IGST) vs Intra-state (CGST + SGST) tax liabilities. |
+
+---
+
 
 ## 🚀 Advanced Engineering Features
 
