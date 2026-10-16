@@ -24,16 +24,29 @@ Engineered strictly for **scale, data immutability, and government tax complianc
 
 ## 📸 System Showcase & Workflow Visuals
 
+<div align="center">
+
+### Enterprise Core & Real-Time Trading Platform Interface
+<img src="src/assets/hero.png" alt="FinTrade OS Core Platform" width="850" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);" />
+
+<br/><br/>
+
+### Client-Side Streaming ETL Pipeline & Schema Validation Flow
+<img src="src/assets/data_pipeline.png" alt="High-Throughput Data Pipeline" width="850" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);" />
+
+<br/><br/>
+
 | 🏢 Multi-Node Inventory & Godowns | 🔐 Cryptographic Ledger (SHA-256) |
-| :---: | :---: |
-| Real-time inventory reconciliation across physical godowns with atomic stock transfer locks. | Immutable system audit log with SHA-256 checksums ensuring tamper-proof financial ledgers. |
+| :--- | :--- |
+| **Real-Time Reconciliation**: Real-time atomic stock reconciliation across physical warehouse godowns with locking mechanisms. | **Tamper-Proof Audit**: Every transaction and state alteration is stamped with SHA-256 checksums to enforce zero post-settlement tampering. |
 
 | 📡 NIC E-Way Bill & Hardware Mock | 🧾 Dynamic Algorithmic GST Engine |
-| :---: | :---: |
-| Asynchronous handshake simulation with Indian GST portal for E-Way bill generation (> ₹50k). | Automated resolution of Inter-state (IGST) vs Intra-state (CGST + SGST) tax liabilities. |
+| :--- | :--- |
+| **Govt Portal API Handshake**: Asynchronous simulation of Indian GST NIC E-Way bill generation on freight invoices exceeding ₹50,000. | **Inter/Intra State Tax**: Automated computation of CGST, SGST, and IGST liabilities with barcode-embedded PDF invoice export. |
+
+</div>
 
 ---
-
 
 ## 🚀 Advanced Engineering Features
 
